@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111b25">
+  <meta name="description" content="Dinis Gökaydin — AI engineer with a research background spanning mathematics, psychology and biology. Exploring intelligence, complexity and practical AI systems.">
+  <title>Dinis Gökaydin — AI, research & complex systems</title>
+  <style>
+    :root{--ink:#e9eee9;--muted:#b1bdc1;--dark:#111b25;--dark2:#182634;--paper:#f2f0e9;--paperInk:#26303a;--acid:#c2e684;--line:rgba(255,255,255,.15);--max:1160px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--paper);color:var(--paperInk);line-height:1.6}a{color:inherit}button{font:inherit}::selection{background:var(--acid);color:var(--dark)}
+    .wrap{width:min(calc(100% - 64px),var(--max));margin-inline:auto}.dark{background:var(--dark);color:var(--ink)}
+    header{position:relative;z-index:10;border-bottom:1px solid var(--line)}.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:30px}.wordmark{text-decoration:none;font-weight:750;letter-spacing:-.045em;font-size:1.28rem}.wordmark span{color:var(--acid)}.links{display:flex;gap:32px;align-items:center}.links a{font-size:.86rem;text-decoration:none;color:#cbd5d6;transition:color .2s}.links a:hover,.links a:focus-visible{color:var(--acid)}.nav-badge{font-size:.72rem;border:1px solid #526471;padding:8px 13px;border-radius:99px;color:#c6d3d4;white-space:nowrap}.menu-toggle{display:none;background:none;border:1px solid #6b7b84;color:white;border-radius:10px;padding:8px 12px;cursor:pointer}
+    .hero{position:relative;overflow:hidden;isolation:isolate}.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 72% 42%,rgba(74,105,121,.22),transparent 45%);pointer-events:none;z-index:-1}.hero-grid{display:grid;grid-template-columns:minmax(0,1.07fr) minmax(350px,.93fr);align-items:center;min-height:666px;gap:30px;padding-block:86px 104px}.eyebrow{font-size:.77rem;letter-spacing:.19em;text-transform:uppercase;font-weight:700;color:var(--acid);display:flex;align-items:center;gap:12px}.eyebrow::before{content:"";width:27px;height:1px;background:currentColor}.hero h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(3.7rem,6.5vw,6.55rem);line-height:1.02;letter-spacing:-.075em;margin:23px 0 30px;max-width:750px}.hero h1 em{font-weight:400;color:var(--acid);font-style:italic}.lede{font-size:clamp(1.05rem,1.5vw,1.28rem);color:#c4d0d2;max-width:580px;line-height:1.8}.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:25px;margin-top:36px}.primary{background:var(--acid);color:#15212b;border-radius:4px;font-weight:750;text-decoration:none;padding:15px 23px;font-size:.9rem;display:inline-flex;align-items:center;gap:16px;transition:transform .2s,background .2s}.primary:hover{transform:translateY(-2px);background:#daf6ad}.quiet-link{font-size:.9rem;text-decoration:none;color:#e7efeb;border-bottom:1px solid #8c9a9b;padding-bottom:5px}.quiet-link:hover{color:var(--acid);border-color:var(--acid)}
+    .art{position:relative;aspect-ratio:1.1;max-width:530px;width:100%;margin-inline:auto}.orbit{position:absolute;border:1px solid rgba(188,215,215,.21);border-radius:50%;inset:13%}.orbit.o2{inset:25%}.orbit.o3{inset:37%}.axis{position:absolute;left:50%;top:50%;width:130%;height:1px;background:linear-gradient(90deg,transparent,#66818b75,transparent);transform-origin:center;transform:translate(-50%,-50%) rotate(-30deg)}.axis.alt{transform:translate(-50%,-50%) rotate(48deg)}.center{position:absolute;inset:42%;border-radius:50%;background:var(--acid);box-shadow:0 0 85px 20px rgba(194,230,132,.12);display:grid;place-items:center;color:#17242b;font-family:Georgia,serif;font-size:1.5rem;font-style:italic}.node{position:absolute;background:#1b2b39;border:1px solid #607883;box-shadow:0 14px 35px #08151c80;padding:11px 17px;border-radius:3px;font-size:.85rem;letter-spacing:.025em;color:#e5eeeb}.node small{display:block;color:var(--acid);text-transform:uppercase;font-size:.61rem;letter-spacing:.14em;margin-bottom:1px}.n1{top:13%;left:20%}.n2{top:28%;right:0}.n3{bottom:17%;left:3%}.n4{bottom:8%;right:14%}.pin{position:absolute;width:7px;height:7px;border-radius:50%;background:var(--acid)}.p1{top:13%;right:23%}.p2{bottom:30%;right:6%}.p3{bottom:25%;left:22%}.figure-caption{position:absolute;bottom:-12px;right:5%;color:#8ca2ab;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase}
+    .hero-bottom{border-top:1px solid var(--line);padding:17px 0;display:flex;justify-content:space-between;color:#98abb0;gap:20px;font-size:.76rem;letter-spacing:.07em;text-transform:uppercase}.hero-bottom b{color:#d6e4e0;font-weight:500}
+    section{scroll-margin-top:22px}.section-pad{padding-block:115px}.section-top{display:flex;justify-content:space-between;align-items:start;gap:24px;margin-bottom:54px}.section-index{font-size:.74rem;letter-spacing:.14em;color:#647680;text-transform:uppercase;font-weight:700}.heading{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.6rem,4.6vw,4.7rem);line-height:1.11;letter-spacing:-.06em;font-weight:400;margin:14px 0 0;max-width:760px}.section-note{max-width:310px;color:#63717a;font-size:.93rem;padding-top:42px}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:10%}.bigcopy{font-family:Georgia,serif;font-size:clamp(1.5rem,2.2vw,2.15rem);line-height:1.5;letter-spacing:-.025em;margin:0}.about-copy p{margin-top:0;color:#55636b;font-size:1.02rem;line-height:1.9}.highlight{box-shadow:inset 0 -.32em 0 #d8e8bb}.aside-rule{border-top:1px solid #c9cfcb;padding-top:23px;margin-top:27px;color:#52616a;font-size:.9rem}.aside-rule strong{display:block;color:#27333c;font-weight:650;margin-bottom:7px}
+    .work{background:#e8eae2}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.work-card{background:#fafaf5;padding:34px 29px 39px;min-height:322px;border:1px solid #d9ddd6;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}.work-card:hover{transform:translateY(-5px);box-shadow:0 14px 30px #17242b12}.card-num{color:#6c7c80;font-size:.74rem;letter-spacing:.12em}.work-card h3{font-family:Georgia,serif;font-size:1.65rem;line-height:1.18;font-weight:400;letter-spacing:-.04em;margin:55px 0 16px}.work-card p{color:#5f6b70;font-size:.94rem;margin:0;line-height:1.8}
+    .research{background:var(--dark);color:var(--ink)}.research .section-index{color:var(--acid)}.research .section-note{color:#a6b7bb}.publication-list{border-top:1px solid var(--line)}.publication{display:grid;grid-template-columns:76px 1fr auto;gap:28px;align-items:center;padding:23px 0;border-bottom:1px solid var(--line);text-decoration:none;transition:padding .2s,background .2s}.publication:hover{padding-left:14px;background:#ffffff07}.pub-year{color:var(--acid);font-size:.85rem}.pub-title{font-size:1.02rem;color:#f0f4ef;line-height:1.4}.pub-venue{font-size:.82rem;color:#9fb2b8;margin-top:6px}.pub-arrow{color:var(--acid);font-size:1.32rem}.research-footer{margin-top:28px;color:#a8b9bd;font-size:.81rem}
+    .closing{padding-block:100px;background:var(--acid)}.closing .section-index{color:#40563d}.closing h2{font-family:Georgia,serif;font-weight:400;letter-spacing:-.06em;line-height:1.08;font-size:clamp(2.7rem,5vw,5rem);margin:19px 0}.closing p{max-width:660px;font-size:1.1rem;line-height:1.85;color:#36483a}.closing a{display:inline-block;margin-top:12px;text-decoration:none;border-bottom:1px solid #354e34;padding-bottom:5px;font-weight:700}
+    footer{background:#101a22;color:#9aaab1;padding:33px 0}.foot{display:flex;justify-content:space-between;gap:25px;align-items:center;font-size:.81rem}.foot strong{color:#e3ebe7;font-size:.95rem}.foot a{text-decoration:none;border-bottom:1px solid #64767c}.foot a:hover{color:var(--acid)}
+    @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:10px;padding-block:78px 60px}.art{max-width:500px}.section-top{display:block}.section-note{padding-top:0}.cards{grid-template-columns:1fr}.work-card{min-height:220px}.work-card h3{margin-top:32px}.about-grid{gap:45px}}
+    @media(max-width:640px){.wrap{width:min(calc(100% - 38px),var(--max))}.nav{height:70px}.nav-badge{display:none}.menu-toggle{display:block}.links{display:none;position:absolute;top:69px;left:0;right:0;background:#15232f;border-bottom:1px solid #526471;padding:22px;flex-direction:column;align-items:stretch;gap:18px}.links.open{display:flex}.links a{font-size:1rem}.hero-grid{padding-block:58px 53px;min-height:0}.hero h1{font-size:clamp(3.5rem,13vw,5.7rem)}.lede{font-size:1.05rem}.art{max-width:375px}.node{padding:7px 9px;font-size:.7rem}.node small{font-size:.52rem}.hero-bottom{flex-direction:column;gap:5px}.section-pad{padding-block:73px}.section-top{margin-bottom:37px}.about-grid{grid-template-columns:1fr}.publication{grid-template-columns:48px 1fr 15px;gap:10px}.pub-title{font-size:.93rem}.pub-venue{font-size:.74rem}.closing{padding-block:73px}.foot{align-items:flex-start;flex-direction:column;gap:12px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body>
+<div class="dark">
+  <header>
+    <nav class="nav wrap" aria-label="Main navigation">
+      <a href="#top" class="wordmark">Dinis Gökaydin<span>.</span></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="navlinks" type="button">Menu ☰</button>
+      <div class="links" id="navlinks">
+        <a href="#about">About</a><a href="#work">What I do</a><a href="#research">Research</a>
+      </div>
+      <span class="nav-badge">CURIOUS BY DESIGN</span>
+    </nav>
+  </header>
+  <main id="top">
+  <div class="hero">
+    <div class="hero-grid wrap">
+      <div>
+        <div class="eyebrow">AI engineer · Researcher · Generalist</div>
+        <h1>Dinis of<br><em>all trades.</em></h1>
+        <p class="lede">I work at the intersection of artificial intelligence, mathematics and human cognition — following interesting problems wherever they lead.</p>
+        <div class="hero-actions"><a href="#work" class="primary">Explore my work <span aria-hidden="true">↗</span></a><a href="#research" class="quiet-link">Academic publications ↓</a></div>
+      </div>
+      <div class="art" role="img" aria-label="A conceptual constellation connecting AI engineering, mathematics, psychology and biology">
+        <div class="axis"></div><div class="axis alt"></div><div class="orbit"></div><div class="orbit o2"></div><div class="orbit o3"></div><div class="center">D.</div>
+        <div class="node n1"><small>01 / Systems</small>Mathematics</div>
+        <div class="node n2"><small>02 / Intelligence</small>AI engineering</div>
+        <div class="node n3"><small>03 / Cognition</small>Psychology</div>
+        <div class="node n4"><small>04 / Life</small>Biology</div>
+        <span class="pin p1"></span><span class="pin p2"></span><span class="pin p3"></span>
+        <div class="figure-caption">One mind. Several disciplines.</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-bottom wrap"><span>Research meets engineering</span><span><b>Biology / Psychology / Mathematics / AI</b></span></div>
+</div>
+<section id="about" class="section-pad">
+  <div class="wrap">
+    <div class="section-top"><div><div class="section-index">01 / The short version</div><h2 class="heading">An unconventional<br>route to AI.</h2></div><p class="section-note">Different disciplines, same underlying curiosity: how do complicated systems work?</p></div>
+    <div class="about-grid">
+      <p class="bigcopy">I have degrees in <span class="highlight">biology, psychology and mathematics</span>, and have published research across all three. These days, I build AI systems.</p>
+      <div class="about-copy">
+        <p>My path has taken me through academic research, industry and international development. It hasn't been especially linear, but there is a common thread: understanding complex behaviour, then turning that understanding into something useful.</p>
+        <p>I'm particularly interested in the space where theoretical ideas become working software — and where an interdisciplinary perspective makes a practical difference.</p>
+        <div class="aside-rule"><strong>Jack of all trades?</strong>Possibly. I prefer to think of it as an unwillingness to stop asking questions.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="work" class="work section-pad">
+  <div class="wrap">
+    <div class="section-top"><div><div class="section-index">02 / What I'm working on</div><h2 class="heading">From ideas<br>to working systems.</h2></div><p class="section-note">My current focus is applied AI engineering and the design of useful, reliable AI-powered software.</p></div>
+    <div class="cards">
+      <article class="work-card"><div class="card-num">01 — BUILD</div><h3>Applied AI<br>& agentic systems</h3><p>Designing AI-driven workflows that combine language models, tools, retrieval and software engineering.</p></article>
+      <article class="work-card"><div class="card-num">02 — LEAD</div><h3>Technical leadership<br>& delivery</h3><p>Turning early experiments into maintainable products, while helping teams solve the difficult engineering problems.</p></article>
+      <article class="work-card"><div class="card-num">03 — EXPLORE</div><h3>Intelligence<br>& complex systems</h3><p>Connecting questions from mathematics, cognitive science and biology to the capabilities and limitations of AI.</p></article>
+    </div>
+  </div>
+</section>
+<section id="research" class="research section-pad">
+  <div class="wrap">
+    <div class="section-top"><div><div class="section-index">03 / Academic work</div><h2 class="heading">Selected<br>publications.</h2></div><p class="section-note">Work spanning cognitive science, mathematical biology and the symmetries of patterned systems.</p></div>
+    <div class="publication-list">
+      <a class="publication" target="_blank" rel="noopener" href="https://scholar.google.com/scholar?q=Symmetries+of+Quotient+Networks+for+Periodic+Planar+Lattice+Patterns+II+Hexagonal+Lattice"><span class="pub-year">2019</span><div><div class="pub-title">Symmetries of Quotient Networks for Periodic Planar Lattice Patterns II: Hexagonal Lattice</div><div class="pub-venue">With I. Stewart · International Journal of Bifurcation and Chaos</div></div><span class="pub-arrow" aria-hidden="true">↗</span></a>
+      <a class="publication" target="_blank" rel="noopener" href="https://scholar.google.com/scholar?q=Symmetries+of+Quotient+Networks+for+Doubly+Periodic+Patterns+on+the+Square+Lattice"><span class="pub-year">2019</span><div><div class="pub-title">Symmetries of Quotient Networks for Doubly Periodic Patterns on the Square Lattice</div><div class="pub-venue">With I. Stewart · International Journal of Bifurcation and Chaos</div></div><span class="pub-arrow" aria-hidden="true">↗</span></a>
+      <a class="publication" target="_blank" rel="noopener" href="https://scholar.google.com/scholar?q=Sequential+effects+in+SNARC+Gokaydin"><span class="pub-year">2018</span><div><div class="pub-title">Sequential effects in SNARC</div><div class="pub-venue">Scientific Reports</div></div><span class="pub-arrow" aria-hidden="true">↗</span></a>
+      <a class="publication" target="_blank" rel="noopener" href="https://scholar.google.com/scholar?q=Sequential+effects+modulate+spatial+biases+Gokaydin"><span class="pub-year">2017</span><div><div class="pub-title">Sequential effects modulate spatial biases</div><div class="pub-venue">Journal of Experimental Psychology: General</div></div><span class="pub-arrow" aria-hidden="true">↗</span></a>
+      <a class="publication" target="_blank" rel="noopener" href="https://scholar.google.com/scholar?q=The+Structure+of+Sequential+Effects+Gokaydin"><span class="pub-year">2015</span><div><div class="pub-title">The Structure of Sequential Effects</div><div class="pub-venue">Journal of Experimental Psychology: General</div></div><span class="pub-arrow" aria-hidden="true">↗</span></a>
+      <a class="publication" target="_blank" rel="noopener" href="https://scholar.google.com/scholar?q=The+reinfection+threshold+regulates+pathogen+diversity+The+case+of+influenza"><span class="pub-year">2006</span><div><div class="pub-title">The reinfection threshold regulates pathogen diversity: The case of influenza</div><div class="pub-venue">Journal of the Royal Society Interface</div></div><span class="pub-arrow" aria-hidden="true">↗</span></a>
+    </div>
+    <p class="research-footer">Links search Google Scholar for the corresponding publication. Bibliographic details should be verified before launch.</p>
+  </div>
+</section>
+<section class="closing">
+  <div class="wrap"><div class="section-index">04 / The common thread</div><h2>Stay curious.<br>Build something useful.</h2><p>There may be no tidy label for a career that crosses mathematics, psychology, biology and AI. That's part of the appeal.</p><a href="#top">Back to the beginning ↑</a></div>
+</section>
+</main>
+<footer><div class="wrap foot"><strong>Dinis Gökaydin<span style="color:var(--acid)">.</span></strong><span>AI engineering · Research · Curiosity</span><a href="#top">Back to top ↑</a></div></footer>
+<script>
+  const toggle=document.querySelector('.menu-toggle');const links=document.querySelector('.links');
+  toggle.addEventListener('click',()=>{const opened=links.classList.toggle('open');toggle.setAttribute('aria-expanded',String(opened));});
+  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');toggle.setAttribute('aria-expanded','false');}));
+</script>
+</body>
+</html>
